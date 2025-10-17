@@ -46,6 +46,4 @@ public class UserController {
     public String deleteUser(@PathVariable int uid){
         return userv.deleteUser(uid);
     }
-    
-
 }
