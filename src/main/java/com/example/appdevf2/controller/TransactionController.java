@@ -42,7 +42,7 @@ public class TransactionController {
     }
 
     // D - delete a transaction
-    @DeleteMapping("/deleteTransaction/{billID}")
+    @DeleteMapping("/deleteTransaction/{tid}")
     public String deleteTransaction(@PathVariable int tid) {
         return tserv.deleteTransaction(tid);
     }
