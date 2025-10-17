@@ -17,7 +17,7 @@ import com.example.appdevf2.entity.UserEntity;
 import com.example.appdevf2.service.UserService;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/user")
 public class UserController {
     @Autowired
     UserService userv;

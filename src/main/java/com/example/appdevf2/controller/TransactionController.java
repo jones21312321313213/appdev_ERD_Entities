@@ -17,7 +17,7 @@ import com.example.appdevf2.entity.TransactionEntity;
 import com.example.appdevf2.service.TransactionService;
 
 @RestController
-@RequestMapping("/transaction")
+@RequestMapping("api/transaction")
 public class TransactionController {
 
     @Autowired
