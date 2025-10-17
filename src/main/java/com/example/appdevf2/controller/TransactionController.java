@@ -37,13 +37,13 @@ public class TransactionController {
 
     // U - update a transaction
     @PutMapping("/updateTransaction")
-    public TransactionEntity updateTransaction(@RequestParam int billID, @RequestBody TransactionEntity newTransactionDetails) {
-        return tserv.updateTransaction(billID, newTransactionDetails);
+    public TransactionEntity updateTransaction(@RequestParam int tid, @RequestBody TransactionEntity newTransactionDetails) {
+        return tserv.updateTransaction(tid, newTransactionDetails);
     }
 
     // D - delete a transaction
     @DeleteMapping("/deleteTransaction/{billID}")
-    public String deleteTransaction(@PathVariable int billID) {
-        return tserv.deleteTransaction(billID);
+    public String deleteTransaction(@PathVariable int tid) {
+        return tserv.deleteTransaction(tid);
     }
 }

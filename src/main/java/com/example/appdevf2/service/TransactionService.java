@@ -27,11 +27,11 @@ public class TransactionService {
 
     // U - Update a transaction
     @SuppressWarnings("finally")
-    public TransactionEntity updateTransaction(int billID, TransactionEntity newTransactionDetails) {
+    public TransactionEntity updateTransaction(int tid, TransactionEntity newTransactionDetails) {
         TransactionEntity t = new TransactionEntity();
         try {
             // 1) Search the transaction by ID
-            t = trepo.findById(billID).get();
+            t = trepo.findById(tid).get();
 
             // 2) Update the record
             t.setAmount(newTransactionDetails.getAmount());
@@ -39,20 +39,20 @@ public class TransactionService {
             t.setDescription(newTransactionDetails.getDescription());
 
         } catch (NoSuchElementException e) {
-            throw new NoSuchElementException("Transaction: " + billID + " is not found");
+            throw new NoSuchElementException("Transaction: " + tid + " is not found");
         } finally {
             return trepo.save(t);
         }
     }
 
     // D - Delete a transaction
-    public String deleteTransaction(int billID) {
+    public String deleteTransaction(int tid) {
         String msg = "";
-        if (trepo.existsById(billID)) {
-            trepo.deleteById(billID);
-            msg = "Transaction: " + billID + " is successfully deleted!";
+        if (trepo.existsById(tid)) {
+            trepo.deleteById(tid);
+            msg = "Transaction: " + tid + " is successfully deleted!";
         } else {
-            msg = "Transaction: " + billID + " does not exist.";
+            msg = "Transaction: " + tid + " does not exist.";
         }
         return msg;
     }
