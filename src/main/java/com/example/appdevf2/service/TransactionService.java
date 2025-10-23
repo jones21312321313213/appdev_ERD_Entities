@@ -25,6 +25,11 @@ public class TransactionService {
         return trepo.findAll();
     }
 
+    //R - read transaction by id
+    public TransactionEntity getTransactionById(int id){
+        return trepo.findById(id).orElse(null);
+    }
+
     // U - Update a transaction
     @SuppressWarnings("finally")
     public TransactionEntity updateTransaction(int tid, TransactionEntity newTransactionDetails) {
