@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import com.example.appdevf2.entity.UserEntity;
 import com.example.appdevf2.repository.UserRepository;
-
 @Service
 public class UserService {
     @Autowired
@@ -22,6 +21,11 @@ public class UserService {
     //R - read all user records in tbluser
     public List<UserEntity> getAllUsers(){
         return urepo.findAll();
+    }
+
+    //R - read user by id in tbluser
+    public UserEntity getUserById(int id) {
+        return urepo.findById(id).orElse(null);
     }
 
 
