@@ -10,10 +10,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories(basePackages = "com.example.appdevf2.repository")
 @EntityScan(basePackages = "com.example.appdevf2.entity")
 @ComponentScan(basePackages = "com.example.appdevf2")  // also needed for services/controllers
-public class ErdApplication {
+public class JExpenseApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ErdApplication.class, args);
+		SpringApplication.run(JExpenseApplication.class, args);
 	}
 
 }
