@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example.appdevf2</groupId>
-	<artifactId>erd</artifactId>
+	<artifactId>j-expense</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>erd</name>
 	<description>Demo project for Spring Boot</description>
@@ -58,6 +58,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>J-Expense</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
