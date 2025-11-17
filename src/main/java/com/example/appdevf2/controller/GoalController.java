@@ -35,7 +35,7 @@ public class GoalController {
     }
 
     // Get Goal by ID
-    @GetMapping("/{id}")
+    @GetMapping("/getGoal/{id}")
     public GoalEntity getGoalById(@PathVariable int id) {
         return goalService.getGoalById(id);
     }
