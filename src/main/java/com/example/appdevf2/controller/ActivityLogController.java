@@ -47,7 +47,7 @@ public class ActivityLogController {
     }
 
     // UPDATE
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<ActivityLogEntity> update(
             @PathVariable int id,
             @RequestBody ActivityLogEntity updatedLog) {
@@ -62,7 +62,7 @@ public class ActivityLogController {
     }
 
     // DELETE
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> delete(@PathVariable int id) {
         if (activityLogService.getById(id).isPresent()) {
             activityLogService.deleteById(id);
