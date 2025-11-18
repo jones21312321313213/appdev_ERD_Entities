@@ -54,7 +54,6 @@ public class ActivityLogController {
 
         return activityLogService.getById(id).map(existing -> {
             existing.setAmount(updatedLog.getAmount());
-            existing.setCurrentAmount(updatedLog.getCurrentAmount());
             existing.setCategory(updatedLog.getCategory());
             existing.setDateModified(updatedLog.getDateModified());
             return ResponseEntity.ok(activityLogService.save(existing));

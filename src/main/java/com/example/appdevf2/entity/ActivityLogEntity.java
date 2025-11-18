@@ -20,9 +20,6 @@ public class ActivityLogEntity {
     @Column(name = "amount")
     private double amount;
 
-    @Column(name = "current_amount")
-    private double currentAmount;
-
     @Column(name = "date_modified")
     private Date dateModified;
 
@@ -37,7 +34,6 @@ public class ActivityLogEntity {
         super();
         this.activityID = activityID;
         this.amount = amount;
-        this.currentAmount = currentAmount;
         this.dateModified = dateModified;
         this.category = category;
     }
@@ -48,9 +44,7 @@ public class ActivityLogEntity {
     public void setAmount(double amount) {
         this.amount = amount;
     }
-    public void setCurrentAmount(double currentAmount) {
-        this.currentAmount = currentAmount;
-    }
+
     public void setDateModified(Date dateModified) {
         this.dateModified = dateModified;
     }
@@ -64,9 +58,7 @@ public class ActivityLogEntity {
     public double getAmount() {
         return amount;
     }
-    public double getCurrentAmount() {
-        return currentAmount;
-    }
+
     public Date getDateModified() {
         return dateModified;
     }
